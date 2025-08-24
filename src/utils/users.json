@@ -1,0 +1,47 @@
+[
+    {
+      "userId": "9f4b2d7a-5c10-4f27-b8c3-d99f6c6b42b8",
+      "name": "John Anderson",
+      "email": "john.anderson@example.com",
+      "password": "John@123",
+      "phoneNumber": "+1-202-555-0147",
+      "address": "742 Evergreen Terrace, Springfield, IL",
+      "createdAt": "2025-07-15T10:00:00Z"
+    },
+    {
+      "userId": "6c35a4be-8f21-45c0-95b9-4b10d239ed9f",
+      "name": "Sophia Carter",
+      "email": "sophia.carter@example.com",
+      "password": "Sophia#2025",
+      "phoneNumber": "+1-202-555-0198",
+      "address": "123 Maple Street, Austin, TX",
+      "createdAt": "2025-07-16T14:30:00Z"
+    },
+    {
+      "userId": "2ac6c67d-3e88-4829-9b2e-b1f5cfa06711",
+      "name": "David Thompson",
+      "email": "david.thompson@example.com",
+      "password": "David!789",
+      "phoneNumber": "+1-202-555-0176",
+      "address": "456 Oak Avenue, Seattle, WA",
+      "createdAt": "2025-07-18T09:45:00Z"
+    },
+    {
+      "userId": "fce0a85b-1c46-4df6-9a5d-67363f8ff3f2",
+      "name": "Emily Johnson",
+      "email": "emily.johnson@example.com",
+      "password": "Emily*456",
+      "phoneNumber": "+1-202-555-0132",
+      "address": "789 Pine Road, Denver, CO",
+      "createdAt": "2025-07-19T17:10:00Z"
+    },
+    {
+      "userId": "d84b24bb-5b9c-4b4a-a41b-5cd7b3a8f5e1",
+      "name": "Michael Smith",
+      "email": "michael.smith@example.com",
+      "password": "MikePass99",
+      "phoneNumber": "+1-202-555-0185",
+      "address": "321 Birch Lane, Miami, FL",
+      "createdAt": "2025-07-21T12:25:00Z"
+    }
+  ]

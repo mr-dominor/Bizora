@@ -1,0 +1,79 @@
+[
+  {
+    "cartId": "CART-001",
+    "userId": "9f4b2d7a-5c10-4f27-b8c3-d99f6c6b42b8",
+    "productId": "ca7662fa-127d-4a27-ab7e-c523086631de",
+    "title": "Classic Navy Business Suit",
+    "image": "/images/products/classic-navy-business-suit.jpg",
+    "quantity": 1,
+    "price": 14999,
+    "totalPrice": 14999,
+    "addedAt": "2025-08-01T09:30:00Z"
+  },
+  {
+    "cartId": "CART-001",
+    "userId": "9f4b2d7a-5c10-4f27-b8c3-d99f6c6b42b8",
+    "productId": "e55c4cc3-a27b-49b9-8549-88bcac77f8c8",
+    "title": "Indo-Western Bandhgala",
+    "image": "/images/products/indo-western-bandhgala.jpg",
+    "quantity": 1,
+    "price": 12999,
+    "totalPrice": 12999,
+    "addedAt": "2025-08-01T09:32:00Z"
+  },
+  {
+    "cartId": "CART-002",
+    "userId": "6c35a4be-8f21-45c0-95b9-4b10d239ed9f",
+    "productId": "d29e2861-5756-459f-8da1-65235bf63378",
+    "title": "Wine Red Cocktail Suit",
+    "image": "/images/products/wine-red-cocktail-suit.jpg",
+    "quantity": 2,
+    "price": 9100,
+    "totalPrice": 18200,
+    "addedAt": "2025-08-02T15:15:00Z"
+  },
+  {
+    "cartId": "CART-003",
+    "userId": "2ac6c67d-3e88-4829-9b2e-b1f5cfa06711",
+    "productId": "ae114e08-6e81-45b1-aaff-20127eb166cf",
+    "title": "Tweed Winter Suit",
+    "image": "/images/products/tweed-winter-suit.jpg",
+    "quantity": 1,
+    "price": 6999,
+    "totalPrice": 6999,
+    "addedAt": "2025-08-03T12:00:00Z"
+  },
+  {
+    "cartId": "CART-004",
+    "userId": "fce0a85b-1c46-4df6-9a5d-67363f8ff3f2",
+    "productId": "53f1b21a-7455-4238-b5ec-84e9609b6490",
+    "title": "Khaki Urban Suit",
+    "image": "/images/products/khaki-urban-suit.jpg",
+    "quantity": 1,
+    "price": 9000,
+    "totalPrice": 9000,
+    "addedAt": "2025-08-04T18:40:00Z"
+  },
+  {
+    "cartId": "CART-004",
+    "userId": "fce0a85b-1c46-4df6-9a5d-67363f8ff3f2",
+    "productId": "6d85a0b8-0e78-4fbb-8e51-b98af917b71f",
+    "title": "Black Funeral Suit",
+    "image": "/images/products/black-funeral-suit.jpg",
+    "quantity": 2,
+    "price": 5999,
+    "totalPrice": 11998,
+    "addedAt": "2025-08-04T18:42:00Z"
+  },
+  {
+    "cartId": "CART-005",
+    "userId": "d84b24bb-5b9c-4b4a-a41b-5cd7b3a8f5e1",
+    "productId": "7f2eb20a-6d64-47aa-b49f-da6b6d82cc2d",
+    "title": "Charcoal Slim Executive Suit",
+    "image": "/images/products/charcoal-slim-executive-suit.jpg",
+    "quantity": 1,
+    "price": 22500,
+    "totalPrice": 22500,
+    "addedAt": "2025-08-05T10:20:00Z"
+  }
+]

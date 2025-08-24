@@ -1,0 +1,42 @@
+[
+  {
+    "wishlistId": "a91d9b82-5a6d-4a78-92d5-1a92e59f83df",
+    "userId": "9f4b2d7a-5c10-4f27-b8c3-d99f6c6b42b8",
+    "productId": "e114c517-6eb2-4bb6-bf21-7f163e626ce1",
+    "title": "Black Tie Tuxedo",
+    "image": "/images/products/black-tie-tuxedo.jpg",
+    "addedAt": "2025-08-01T09:30:00Z"
+  },
+  {
+    "wishlistId": "f39be3aa-6a88-4a9b-b522-2d6d53db3082",
+    "userId": "6c35a4be-8f21-45c0-95b9-4b10d239ed9f",
+    "productId": "30ae34b9-c8ed-44e7-a6db-849bcdaea00c",
+    "title": "Grey Office Day Suit",
+    "image": "/images/products/grey-office-day-suit.jpg",
+    "addedAt": "2025-08-02T14:15:00Z"
+  },
+  {
+    "wishlistId": "cdbac2bb-5d64-44a5-815e-084f23f49610",
+    "userId": "2ac6c67d-3e88-4829-9b2e-b1f5cfa06711",
+    "productId": "b11199cf-35cc-47c9-bb51-7d42a9a36391",
+    "title": "Designer Sherwani Suit",
+    "image": "/images/products/designer-sherwani-suit.jpg",
+    "addedAt": "2025-08-03T12:00:00Z"
+  },
+  {
+    "wishlistId": "65068f93-4248-4d5d-bb15-b6ec7fba21c0",
+    "userId": "fce0a85b-1c46-4df6-9a5d-67363f8ff3f2",
+    "productId": "d29e2861-5756-459f-8da1-65235bf63378",
+    "title": "Wine Red Cocktail Suit",
+    "image": "/images/products/wine-red-cocktail-suit.jpg",
+    "addedAt": "2025-08-04T18:40:00Z"
+  },
+  {
+    "wishlistId": "dfc76d0e-aeaf-4b76-a529-08a8c4b68a7c",
+    "userId": "d84b24bb-5b9c-4b4a-a41b-5cd7b3a8f5e1",
+    "productId": "8687bc26-e2b7-40a5-b003-62cb528d624d",
+    "title": "Summer Peach Wedding Suit",
+    "image": "/images/products/summer-peach-wedding-suit.jpg",
+    "addedAt": "2025-08-05T10:20:00Z"
+  }
+]
