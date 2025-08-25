@@ -2,11 +2,11 @@
 import dotenv from 'dotenv'
 import { Item } from "./type_def";
 dotenv.config()
-import { supabase } from "./supabase";
+import { supabaseServer } from './supabaseServer';
 
 export const getAllQueries = async () => {
   try {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseServer
       .from("items")
       .select("*");
 
@@ -34,7 +34,7 @@ export const getItemsByAttribute = async ({
 
   // Use sql.unsafe() to insert the validated column name
   try {
-    const {data , error} = await supabase.from('items').select('*').eq(key,decodedValue)
+    const {data , error} = await supabaseServer.from('items').select('*').eq(key,decodedValue)
     const result = data as Item[] | null;
     if (error) throw error;
     console.log('Items:', data)
@@ -47,7 +47,7 @@ export const getItemsByAttribute = async ({
 export const getProduct = async({id}:{id:string})=>{
   if(!id) throw new Error("Id is undefined")
     try {
-      const {data , error} = await supabase.from('items').select('*').eq('id',id)
+      const {data , error} = await supabaseServer.from('items').select('*').eq('id',id)
       const result = data as Item[] | null;
       if (error) throw error;
       console.log('Items:', data)
@@ -60,7 +60,7 @@ export const getProduct = async({id}:{id:string})=>{
 export const searchSuggestion = async({term}:{term:string}) =>{
   if(!term) throw new Error("what to query")
     try {
-      const { data, error } = await supabase
+      const { data, error } = await supabaseServer
     .from("items")
     .select("id, title")
     .textSearch("search_vector", term, {
