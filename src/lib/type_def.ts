@@ -9,5 +9,6 @@ export type Item = {
     price:number|string;
     features:string;
     image:string;
+    description:string,
     createdAt:string|Date;
 };

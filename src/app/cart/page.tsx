@@ -16,13 +16,13 @@ export default function Cart() { // ✅ Keeping your query
   useEffect(() => {
     console.log(user)
   if (!user) return;            // wait until user is loaded
-  if (!user.userid) {
+  if (!user?.id) {
     router.push("/signin");
     return;                     // stop execution after redirect
   }
     const getData = async()=>{
     try {
-        const res = await fetch(`/api/cart?userId=${encodeURIComponent(user?.userid)}`, {
+        const res = await fetch(`/api/cart?userId=${encodeURIComponent(user?.id)}`, {
             method: "GET",
             headers: { "Content-Type": "application/json" },
         });

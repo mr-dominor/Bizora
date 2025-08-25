@@ -8,10 +8,22 @@ import bcrypt from "bcryptjs";
 interface AuthProps {
   user: User | null;
   session: Session | null;
-  signUp: (args: { name:string,email:string,phonenumber:string,password:string,address:string}) => Promise<void>;
-  signIn: (args: { email: string; password: string }) => Promise<void>;
+  signUp: (args: { 
+    name: string; 
+    email: string; 
+    phonenumber: string; 
+    password: string; 
+    address: string; 
+  }) => Promise<{ user: User | null; session: Session | null }>;
+  
+  signIn: (args: { 
+    email: string; 
+    password: string; 
+  }) => Promise<{ user: User | null; session: Session | null }>;
+
   signOut: () => Promise<void>;
 }
+
 
 const Context = createContext<AuthProps | undefined>(undefined);
 
@@ -83,7 +95,7 @@ const Provider = ({ children }: { children: ReactNode }) => {
       const sessionData = await supabase.auth.getSession();
       setSession(sessionData.data.session ?? null);
       setUser(sessionData.data.session?.user ?? null);
-
+      console.log(data);
       return data;
   } catch (err) {
       console.error('Sign Up failed:', err);
@@ -100,7 +112,7 @@ const signIn = async({email,password}:{email:string,password:string})=>{
       const sessionData = await supabase.auth.getSession();
       setSession(sessionData.data.session ?? null);
       setUser(sessionData?.data?.session?.user ?? null);
-
+      console.log(sessionData)
       return data;
   } catch (err) {
       console.error('Sign In failed:', err);

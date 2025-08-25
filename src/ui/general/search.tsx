@@ -2,9 +2,14 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
+interface Suggestion {
+  id: string;
+  title: string;
+}
+
 export default function SearchBar() {
   const [query, setQuery] = useState("");
-  const [suggestions, setSuggestions] = useState([]);
+  const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [load,setLoad] = useState(false);
   const router = useRouter();
 

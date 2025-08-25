@@ -22,7 +22,7 @@ export default function Detail({data}:{data:Item[]}){
     const extraInfo = ['features','occasion','style','fabric','fit']
     const {user} = useAuth()
     const router = useRouter()
-    console.log(user?.userid)
+    console.log(user?.id)
     const formatValue = (value: unknown): React.ReactNode => {
          if (value instanceof Date) return value.toLocaleDateString();
          if (value === null || value === undefined) return '';
@@ -36,7 +36,7 @@ export default function Detail({data}:{data:Item[]}){
 ) {
     setError("");
     setLoading(true);
-    const userId = user?.userid
+    const userId = user?.id
     if (!title ||!image || !price || !id || !userId) {
         setError("Item corrupted, can't add it to cart");
         setLoading(false);

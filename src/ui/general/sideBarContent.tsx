@@ -69,7 +69,7 @@ export default function SideBarContent({occasionList,styleList,fitList,fabricLis
              </AccordionItem>
         </Accordion>
         <div className="absolute bottom-0 py-10">
-          <p className="capitalize text-maroon font-bold">{user?.name?user.name:"Nothing"}</p>
+          <p className="capitalize text-maroon font-bold">{user?"User":"Nothing"}</p>
           <button className="w-[50%] p-2 h-full bg-amber-200 hover:bg-amber-400 hover:text-white rounded-xl " onClick={()=>handleLogout()}>
              Logout
           </button>

@@ -28,7 +28,7 @@ export default function SignUp() {
     try {
       const res =await signUp({name,email,phonenumber,password,address});
       console.log(res)
-       if (res?.length === 0) {
+       if (!res.user) {
          setError("Signup failed");
        } else {
         setSuccess("Signup successful!");

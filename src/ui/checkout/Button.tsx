@@ -9,7 +9,7 @@ type Props={
     name:string;
     price:number;
     quantity:number;
-    classType:"string";
+    classType:string;
     children:ReactNode;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 

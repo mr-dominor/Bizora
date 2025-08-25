@@ -34,8 +34,8 @@ export default function BuyPage() {
         } else {
           setProduct(data[0]);
         }
-      } catch (err) {
-        setError(err?.message);
+      } catch (err:any) {
+        setError(err?.message || "Not able to do so" );
       }
     };
 
@@ -44,7 +44,7 @@ export default function BuyPage() {
 
   useEffect(() => {
     if(product){
-      setTotal(quantity * (product?.price ?? 0));
+      setTotal(quantity * (product?.price as number | 0));
     }
   }, [product,quantity]);
 
@@ -63,8 +63,8 @@ export default function BuyPage() {
           {/* Product Image */}
           <div className="md:w-1/2 flex justify-center bg-gray-100">
             <Image
-              src={product?.image.replace(/^(\.\.\/)?public/, "")}
-              alt={product?.title}
+              src={product?.image.replace(/^(\.\.\/)?public/, "") as string}
+              alt={product?.title as string}
               width={384}
               height={400}
               className="object-cover rounded-lg"
@@ -127,9 +127,9 @@ export default function BuyPage() {
             <div className="mt-8 flex gap-4">
               <PayButton
                 name={product?.title as string}
-                price={Math.round((product?.price | 0) as number)}
+                price={Math.round((product?.price as number | 0))}
                 quantity={quantity as number}
-                classType={"flex-1 flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-medium py-3 rounded-lg" as string}
+                classType={`flex-1 flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-medium py-3 rounded-lg`}
                >
                 <CreditCard /> Buy
                </PayButton>
