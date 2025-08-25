@@ -3,9 +3,7 @@ import Detail from "@/ui/details/detail";
 
 export default async function Product({
   params,
-}: {
-  params: { id: string };
-}) {
+}: any) {
   try {
     const data = await getProduct({ id: params.id });
 
