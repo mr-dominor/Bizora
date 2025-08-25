@@ -1,4 +1,4 @@
-import { supabase } from "@/lib/supabase";
+import { supabaseServer } from "@/lib/supabaseServer";
 
 interface CartProps {
   title:string;
@@ -10,7 +10,7 @@ interface CartProps {
 
 export async function addToCart({ title,image, id, price, userId }: CartProps) {
   try {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseServer
       .from("cart")
       .insert([
         {
@@ -34,7 +34,7 @@ export async function addToCart({ title,image, id, price, userId }: CartProps) {
 
 export async function deleteFromCart({ id }: { id: string }) {
   try {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseServer
       .from("cart")
       .delete()
       .eq("id", id)
@@ -51,7 +51,7 @@ export async function deleteFromCart({ id }: { id: string }) {
 
 export async function getFromCart({ id }: { id: string }) {
   try {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseServer
       .from("cart")
       .select("*")
       .eq("userid", id);
