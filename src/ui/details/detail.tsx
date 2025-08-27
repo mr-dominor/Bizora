@@ -22,7 +22,7 @@ export default function Detail({data}:{data:Item[]}){
     const extraInfo = ['features','occasion','style','fabric','fit']
     const {user} = useAuth()
     const router = useRouter()
-    console.log(user?.id)
+    console.log(user?.userid)
     const formatValue = (value: unknown): React.ReactNode => {
          if (value instanceof Date) return value.toLocaleDateString();
          if (value === null || value === undefined) return '';
@@ -32,17 +32,17 @@ export default function Detail({data}:{data:Item[]}){
     title:string,
     image: string,
     price: number|string ,
-    id: string,
+    userid: string,
 ) {
     setError("");
     setLoading(true);
-    const userId = user?.id
-    if (!title ||!image || !price || !id || !userId) {
+    const userId = user?.userid
+    if (!title ||!image || !price || !userid || !userId) {
         setError("Item corrupted, can't add it to cart");
         setLoading(false);
         return;
     }
-    const form = { title,image, id, price, userId};
+    const form = { title,image, userid, price, userId};
 
     try {
         const res = await fetch("/api/cart", {

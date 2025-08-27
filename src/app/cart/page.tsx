@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
-import { DeleteIcon } from "lucide-react";
+import { DeleteIcon,ShoppingBagIcon } from "lucide-react";
 import { currencyConverter } from "@/utils/utils";
 import { Item } from "@/lib/type_def";
 import { useEffect,useState } from "react";
@@ -14,15 +14,15 @@ export default function Cart() { // ✅ Keeping your query
   const router = useRouter();
   const [cart,setCart] = useState<Item[]>([])
   useEffect(() => {
-    console.log(user)
-  if (!user) return;            // wait until user is loaded
-  if (!user?.id) {
+  if (!user) return;
+  console.log(user)            // wait until user is loaded
+  if (!user?.userid) {
     router.push("/signin");
     return;                     // stop execution after redirect
   }
     const getData = async()=>{
     try {
-        const res = await fetch(`/api/cart?userId=${encodeURIComponent(user?.id)}`, {
+        const res = await fetch(`/api/cart?userId=${encodeURIComponent(user?.userid)}`, {
             method: "GET",
             headers: { "Content-Type": "application/json" },
         });
@@ -40,7 +40,6 @@ export default function Cart() { // ✅ Keeping your query
   getData()
   },[user]);
   console.log(cart)
-  
   
   const deleteItemFromCart = async(id:string)=>{
 
@@ -68,7 +67,7 @@ export default function Cart() { // ✅ Keeping your query
       <div className="w-screen h-20 bg-maroon fixed top-0" />
       <h1 className="text-xl text-black pt-24">MY CART</h1>
 
-      <div className="h-auto w-full flex flex-col justify-center items-center py-4">
+      <div className="h-auto w-full flex flex-col justify-center items-center py-4 ">
         {cart.length === 0 ? (
           <h1 className="text-xl">There is nothing here</h1>
         ) : (
@@ -82,13 +81,13 @@ export default function Cart() { // ✅ Keeping your query
             return (
               <div
                 key={item.id}
-                className="w-[400px] px-4 py-3 bg-beige border-2 border-solid flex items-start gap-4 mb-4"
+                className="w-[400px] px-4 py-3 bg-beige border-2 border-solid flex items-start gap-4 mb-4 rounded-xl"
               >
                 {/* Image */}
-                <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-lg overflow-hidden bg-gray-200 flex items-center justify-center">
                   {item.image ? (
                     <img
-                      src={item.image}
+                      src={item?.image.replace(/^(\.\.\/)?public/, "") as string}
                       alt={item.title || "Product image"}
                       className="w-full h-full object-cover"
                     />
@@ -113,11 +112,12 @@ export default function Cart() { // ✅ Keeping your query
                     </span>
                   </p>
 
-                  <div className="w-full h-12 mt-2 border-solid border-t-2 flex">
-                    <button className="w-[50%] h-full bg-amber-200 hover:bg-amber-400 hover:text-white">
-                      Buy
+                  <div className="w-full h-12 mt-2 border-solid border-t-2 flex gap-x-2">
+                    <button className="w-[50%] h-full rounded-lg mt-1 flex flex-col justify-center items-center bg-amber-200 hover:bg-amber-400 hover:text-white" onClick={()=>router.push(`/book/${item?.id}`)}>
+                      <ShoppingBagIcon className="w-6 h-6" />
+                      <span className="text-sm">Buy Now</span>
                     </button>
-                    <button className="w-[50%] h-full flex flex-col justify-center items-center bg-amber-200 hover:bg-amber-400 hover:text-white" onClick={()=>deleteItemFromCart(item?.id)}>
+                    <button className="w-[50%] h-full rounded-lg mt-1 flex flex-col justify-center items-center bg-amber-200 hover:bg-amber-400 hover:text-white" onClick={()=>deleteItemFromCart(item?.id)}>
                       <DeleteIcon className="w-6 h-6" />
                       <span className="text-sm">Delete</span>
                     </button>
